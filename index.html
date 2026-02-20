@@ -4,27 +4,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knowledge Graphs and LLMs</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/reveal.css" />
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/theme/black.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/theme/moon.css" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-markdown="slides/section-1/slide-1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
-      <section data-markdown="slides/section-1/slide-2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      <section>
+        <section data-markdown="slides/intro/slide-1-title.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/intro/slide-2-about-me.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section data-markdown="slides/section-1-llms-and-structure/slide-1-hook.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-1-llms-and-structure/slide-2-why-llms-struggle.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-1-llms-and-structure/slide-3-before-llms-semantic-web.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section data-markdown="slides/section-2-knowledge-graph-basics/slide-4-ontology-vs-knowledge-graph.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-2-knowledge-graph-basics/slide-5-rdf-owl-modeling.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-2-knowledge-graph-basics/slide-6-semantic-web-didnt-take-over.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-2-knowledge-graph-basics/slide-7-knowledge-graphs-good-at.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-08-llm-extracts-to-graph.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-09-demo-graph.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-10-kg-grounds-llm.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-11-different-from-plain-rag.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-12-what-this-fixes.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-3-llm-kg-symbiosis/slide-13-where-this-breaks.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section data-markdown="slides/section-4-practical-takeaways/slide-14-practical-application.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section data-markdown="slides/section-4-practical-takeaways/slide-15-final-takeaway.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
     </div>
   </div>
 
   <script src="https://unpkg.com/reveal.js@5.2.1/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
       width: 1200,
       height: 700,
-      plugins: [ RevealMarkdown, RevealNotes ]
+      plugins: [ RevealMarkdown, RevealNotes, RevealMermaid ],
+      mermaid: { theme: 'dark' }
     });
   </script>
 </body>

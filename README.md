@@ -25,6 +25,26 @@ slides/
 
 Order is given by walking sections and files alphabetically. After editing, run `pnpm build` to regenerate `index.html`.
 
+**Images:** Use standard Markdown, e.g. `![alt text](path/to/image.png)`, or raw HTML if you need size/class control.
+
+**Mermaid diagrams:** Embed programmatic diagrams (flowcharts, graphs, nodes and edges) with raw HTML in any slide. Use `<pre class="mermaid">` (the reveal.js-mermaid-plugin expects this):
+
+```html
+<pre class="mermaid">
+flowchart LR
+  A[Tokens] --> B[No memory]
+  C[KG] --> D[Nodes and edges]
+</pre>
+```
+
+Speaker notes go in a line starting with `Note:` (with a blank line before it).
+
+## Theme and customization
+
+- **Base theme:** Set in the build template in `scripts/build.js` (e.g. `moon.css`, `black.css`). See [Reveal.js themes](https://revealjs.com/themes/).
+- **Overrides:** Edit `css/custom.css` for typography, spacing, title slide, blockquotes, and layout helpers (`.two-col`, `.highlight-box`, `.dim`).
+- **Favicon:** The repo includes `favicon.svg` (a small knowledge-graph icon). To use your own (e.g. a company logo): replace `favicon.svg` with your image, or add a `favicon.ico` / `favicon.png` and change the `<link rel="icon">` in `scripts/build.js` to point to it. To generate a favicon from an image URL (e.g. a logo): use [realfavicongenerator.net](https://realfavicongenerator.net/) (paste the image URL or upload a file), then download the package and copy the favicon files into the repo and update the build/deploy to include them.
+
 ## Viewing the presentation
 
 - **Local:** Run `pnpm start` and open `http://localhost:8000` (opening `index.html` directly may not load external Markdown).
