@@ -1,0 +1,13 @@
+{
+  "name": "knowledge-graphs-and-llms",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Presentation: LLMs and knowledge graphs for more reliable AI systems.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "pnpm exec serve . -p 8000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

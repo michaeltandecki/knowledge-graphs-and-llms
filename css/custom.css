@@ -1,0 +1,18 @@
+/* Custom typography and layout (reference: DouwMarx/presentations) */
+.reveal h2 { font-size: 1.4em; }
+.reveal h3 { font-size: 1.0em; color: #333; }
+.reveal ul, .reveal ol { font-size: 0.75em; }
+.reveal li { margin-bottom: 0.4em; }
+.reveal p { font-size: 0.75em; }
+.reveal .small { font-size: 0.55em; }
+.reveal .dim { color: #999; }
+.reveal blockquote { font-size: 0.7em; width: 90%; padding: 0.5em 1em; background: rgba(0,0,0,0.03); border-left: 4px solid #888; }
+.reveal table { font-size: 0.6em; margin: 0 auto; }
+.reveal table th { background: rgba(0,0,0,0.06); }
+.reveal pre { font-size: 0.42em; }
+.two-col { display: flex; gap: 2em; align-items: flex-start; }
+.two-col > * { flex: 1; }
+.highlight-box { background: rgba(0,0,0,0.04); border-radius: 8px; padding: 0.8em 1em; margin: 0.5em 0; }
+.reveal .fig-iframe { width: 95%; height: 500px; border: 1px solid #eee; border-radius: 4px; }
+.reveal .fig-iframe-tall { width: 95%; height: 550px; border: 1px solid #eee; border-radius: 4px; }
+.reveal .fig-iframe-short { width: 95%; height: 350px; border: 1px solid #eee; border-radius: 4px; }
