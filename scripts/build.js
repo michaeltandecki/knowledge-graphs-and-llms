@@ -63,10 +63,12 @@ ${sections}
     </div>
   </div>
 
+  <div id="kg-progress" aria-hidden="true"></div>
   <script src="https://unpkg.com/reveal.js@5.2.1/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
+  <script src="js/mini-graph-progress.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
@@ -75,6 +77,7 @@ ${sections}
       plugins: [ RevealMarkdown, RevealNotes, RevealMermaid ],
       mermaid: { theme: 'dark' }
     });
+    initializeMiniGraphProgress(Reveal);
   </script>
 </body>
 </html>
