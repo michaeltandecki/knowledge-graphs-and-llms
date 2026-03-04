@@ -2,10 +2,11 @@
 
 Structured knowledge and explicit relationships existed long before large language models.
 
-- Semantic Web vision: data as linked, machine-readable facts
-- Knowledge graphs grew out of that — entities, types, relations
-- LLMs arrived later and excelled at language, not at memory or identity
+- **2001:** Semantic Web vision for linked, machine-readable data
+- **2012:** "Knowledge Graph" popularized in search (from strings to things)
+- **2022+:** LLM boom for language interfaces at scale
+- What stuck: structured data where incentives were clear (search, commerce, rich snippets)
 
 Note:
-- Visual: simple timeline. Left: "Semantic Web / RDF" → middle: "Knowledge graphs (enterprise, search)" → right: "LLMs." One sentence under each. No jargon.
-- Brief intro only. Audience needs to see that "graphs" aren't a reaction to LLMs; they're a pre-existing tool for structure.
+- Key message: graphs are not a reaction to LLMs.
+- "We're kind of reinventing the wheel in a new context." — Juan Sequeda (talk transcript excerpt, user-provided).

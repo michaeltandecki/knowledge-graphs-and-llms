@@ -1,12 +1,15 @@
 ## Hook
 
-LLMs are powerful language interfaces — but without structure they drift, contradict themselves, and forget.
+Two chats. Same user. Same question. Different answer.
 
-- Ask "What did we decide last time?" — the model has no idea
-- Same question twice can yield different answers
-- No stable notion of "this person" or "that project"
+> **Chat A:** "What's our budget for Project Atlas?" → "$50k."
+>
+> **Chat B (new session):** "What's our budget for Project Atlas?" → "I don't have that context."
+
+- No stable identity across sessions unless you add persistent memory
+
+<small><em>"In 2026, the battleground moves to memory." — Tony Seale (user-provided excerpt)</em></small>
 
 Note:
-- Open with a one-line failure: e.g. "ChatGPT, what's my budget?" then new chat, same question — different or no answer.
-- Visual: side-by-side or before/after — one panel "You: What's the budget?" / "LLM: $50k"; other panel new conversation, "You: What's the budget?" / "LLM: I don't have that context." Shows the contradiction.
-- Keep it short. This is the hook; don't over-explain.
+- This is not a "model bug"; it is a system design gap.
+- Tight phrasing: the **system** has no persistent memory unless you add one.

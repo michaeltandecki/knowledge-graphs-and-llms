@@ -1,31 +1,25 @@
 ## Final Takeaway
 
-The future is not smarter models — it's better memory.
+The near-term leverage is not just smarter models — it's better memory + better meaning.
 
 <pre class="mermaid">
 flowchart TB
-  subgraph brain [Brain]
-    subgraph storage [Storage]
-      Memory[Memory]
-      Knowledge[Knowledge]
-    end
-    DM["Decision Making, Reasoning and Planning"]
-  end
+  U[User question]
+  LLM[LLM: language interface]
+  KG[Knowledge graph: entity/relationship memory]
+  ONT[Ontology: meaning contract]
+  CTX[Context graph: observed behavior/events]
+  A[Grounded answer]
 
-  LLM[Large Language Models]
-  KG[Knowledge Graphs]
-  Perception[Perception]
-  Action[Action]
-  Nexus[Human Brain]
-
-  LLM <--> DM
-  Knowledge --> KG
-  Perception --> Nexus
-  Nexus --> Action
-  Nexus --> DM
-  Memory <--> DM
-  Knowledge <--> DM
+  U --> LLM
+  LLM --> KG
+  LLM --> CTX
+  ONT --> KG
+  KG --> LLM
+  CTX --> LLM
+  LLM --> A
 </pre>
 
 Note:
-- Visual: diagram shows LLMs and KGs complementing the Brain (memory, knowledge, decision-making); perception and action flow through. Strong closing. Pause after the first line.
+- Softener: models will keep improving; memory systems are today's practical leverage.
+- Close with: "The future is not just better reasoning—it's the battle to own memory." — Tony Seale (user-provided excerpt).

@@ -1,11 +1,12 @@
 ## Where This Breaks
 
-Extraction errors, over-modeling, and false certainty — graphs are not magic.
+Extraction errors, identity failures, over-modeling, and false certainty.
 
-- LLM extraction gets relations wrong or invents entities
-- Too much schema too soon: paralysis or brittle graphs
-- System can look confident while propagating graph errors into answers
+- LLM extraction can invent entities or wrong relations
+- Entity duplication is common (`Alice` becomes 5 nodes)
+- Ontology-first can fail early; no ontology can create semantic debt later
+- Systems can sound confident while propagating graph mistakes
 
 Note:
-- Visual: same small graph as earlier, but one edge in red/crossed out with label "wrong extraction." Optional: a second callout "over-modeled" on an overly dense cluster.
-- Honest ending to the symbiosis act: it's a tool, not a silver bullet.
+- Mitigation: start from one business question, iterate schema, validate with SHACL, keep humans in loop for critical edges.
+- "Ontology-first approaches fail early projects..." — Rewant R. (user-provided excerpt).

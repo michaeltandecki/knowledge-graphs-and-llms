@@ -1,12 +1,14 @@
 ## What Knowledge Graphs Are Actually Good At
 
-Identity, relationships, memory, and constraints — the things LLMs lack.
+Identity, explicit relationships, persistent memory, and validation.
 
-- One canonical "Alice" that all references point to
+- Stable entities with IDs (the same `Alice#123` everywhere)
 - Explicit edges: worksAt, reportsTo, partOf
 - Persistent store that survives restarts and context limits
-- You can enforce rules: "every project has exactly one owner"
+- Rule validation (e.g., required owner, cardinality) via constraints/SHACL
+- Canonical entities only happen if you do entity resolution + ID management
+
+<small><em>"The URIs are coming back." — Tony Seale (user-provided excerpt)</em></small>
 
 Note:
-- Visual: small graph with 2–3 people and 1 company. One person node labeled "Alice (disambiguated)." Edges: worksAt, knows. Callout: "Same Alice everywhere."
-- Emphasize: graphs fix identity and relationship clarity, not "intelligence."
+- KG ≠ smarter reasoning by default; KG = clearer, inspectable ground truth.

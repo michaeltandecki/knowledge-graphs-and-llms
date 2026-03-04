@@ -1,11 +1,12 @@
 ## What RDF and OWL Actually Are
 
-They are modeling standards for graphs — not magical AI, just a way to write down entities and relationships.
+They are standards to represent and share graph data across systems.
 
-- RDF: subject–predicate–object triples (e.g. Alice — worksAt — Acme)
-- OWL: vocabulary for defining classes, properties, and constraints
-- Useful for interoperability and reasoning; the ideas matter more than the acronyms
+- RDF: subject–predicate–object triples **plus identifiers (URIs/IRIs)**
+- OWL: classes, properties, and logical axioms for inference
+- Validation is typically done with **SHACL** (separate from OWL reasoning)
+- Useful for interoperability; helpful, but not mandatory for every KG stack
 
 Note:
-- Visual: one clear triple. Subject: "Alice" (icon or node). Predicate: "worksAt" (arrow label). Object: "Acme Corp" (node). Label: "One RDF triple."
-- Keep it to "triples = the basic unit; OWL = schema language." No formal logic.
+- What these are not: not a graph database, not an LLM feature, not required to start.
+- Pragmatic sequence: start with one business question, then formalize what you need.

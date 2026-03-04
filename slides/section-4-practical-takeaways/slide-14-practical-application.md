@@ -1,11 +1,13 @@
 ## Practical Application
 
-LLM as the interface; knowledge graph as the memory layer.
+LLM as the language interface; knowledge graph as explicit memory.
 
-- Chatbots that remember users, preferences, and past decisions (backed by a graph)
-- Governance: audit what facts the system used, correct bad extractions
-- Start small: one domain, a few entity types, grow the graph as you go
+- Build assistants that remember users, projects, and past decisions through stable IDs
+- Prioritize debuggability/correctability: inspect facts used and edit bad memory directly
+- Start with one business question, model minimal entities/edges, then expand
+
+<small><em>"Ontology is normative... the context graph is empirical." — Kay Iversen (user-provided excerpt)</em></small>
 
 Note:
-- Visual: layered diagram. Top: "User" ↔ "LLM (interface)". Middle: "Graph (memory)". Bottom: "Sources (docs, transcripts)". Arrows: user talks to LLM; LLM reads/writes graph; graph is populated from sources.
-- Relate to "chatbot with memory" and "we can fix the graph when it's wrong" — practical and hopeful.
+- Team pattern: you need a knowledge engineer bridging business meaning and data behavior.
+- "Memory is the new moat." — Tony Seale (user-provided excerpt).

@@ -1,11 +1,11 @@
 ## What This Fixes
 
-Better consistency, memory, and disambiguation — when the graph is right.
+Better consistency, memory, and disambiguation — when graph quality is good.
 
-- Same entity everywhere: "Alice" in the graph is the same Alice in every answer
-- Multi-turn and cross-session: answers can stay consistent by reading from the graph
-- Fewer hallucinations on factual questions when the model is grounded on retrieved subgraphs
+- Same entity everywhere: `Apple#Company` is not `apple#Fruit`
+- Cross-session consistency: answers read from persistent graph memory
+- Fewer factual guesses on questions covered by retrieved graph facts
 
 Note:
-- Visual: before/after. Before: two speech bubbles with slightly different "Alice" facts (contradiction). After: one graph node "Alice" with edges; one answer that correctly uses those facts.
-- Keep it concrete: "Before = inconsistent; after = one source of truth."
+- Scope honesty: this improves covered facts; it does not solve all hallucinations.
+- "You may be correct — but you are blind." — Kay Iversen (user-provided excerpt).

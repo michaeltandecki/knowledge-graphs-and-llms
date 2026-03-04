@@ -1,11 +1,13 @@
 ## Why the Semantic Web Didn't Take Over
 
-Too rigid, too manual, too heavy for most teams.
+It was less about "too rigid" and more about coordination cost, incentives, and tooling maturity.
 
-- Building ontologies and curating triples is slow and expert-heavy
-- The world is messy; rigid schemas break on edge cases
-- LLM-era alternative: extract structure from text, keep graphs lighter and more pragmatic
+- Hard to coordinate shared vocabularies across organizations
+- Incentives were uneven: many teams did not benefit enough to invest early
+- Tooling and workflows felt heavy for most product teams
+- Partial success where incentives were clear (e.g., schema.org and search)
+- LLM extraction reduces manual effort, but does **not** create shared meaning by itself
 
 Note:
-- Visual: left column "Manual modeling" — checklist, hand-drawn schema, "months of work." Right column "Probabilistic extraction" — document in, graph out, "automated, good enough."
-- Honest take: the vision was right, the execution was too top-down. Don't bash it; just contrast.
+- Fair framing: the vision was directionally right; adoption depended on incentives.
+- "Ontology goes mainstream... expect 'semantic' used as 'magic'." — Tony Seale (user-provided excerpt).

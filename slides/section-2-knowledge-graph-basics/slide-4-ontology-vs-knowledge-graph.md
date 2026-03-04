@@ -1,11 +1,12 @@
 ## Ontology vs Knowledge Graph
 
-Ontology is the schema and rules; the knowledge graph is the actual data — instances and relationships.
+Ontology is a **meaning contract**; the knowledge graph is the memory of real instances and relationships.
 
-- Ontology: what types exist (Person, Company), what relations are allowed (worksAt)
-- Knowledge graph: concrete facts — "Alice worksAt Acme Corp"
-- You need both: schema gives meaning, instances give content
+- Ontology (normative layer): classes + relation semantics (Person, Company, worksAt)
+- Taxonomy is the naming/hierarchy layer; ontology adds richer relationship meaning
+- Knowledge graph (empirical layer): concrete facts like `Alice#123 worksAt Acme#77`
+- You need both: meaning for consistency, instances for useful answers
 
 Note:
-- Visual: small diagram. Box "Ontology": Person, Company; allowed edge worksAt. Box "KG": node "Alice" (type Person), node "Acme Corp" (type Company), edge "worksAt" between them.
-- One sentence: ontology = blueprint; KG = the built thing.
+- One-liner: ontology = contract about meaning; KG = observed memory.
+- "Ontology is a contract about meaning." — Rewant R. (user-provided excerpt).
