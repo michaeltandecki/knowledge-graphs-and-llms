@@ -68,7 +68,9 @@ ${sections}
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
+  <script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
   <script src="js/mini-graph-progress.js"></script>
+  <script src="slides/intro/slide-2-about-me-graph.js?v=20260304-5"></script>
   <script>
     Reveal.initialize({
       hash: true,
@@ -78,6 +80,11 @@ ${sections}
       mermaid: { theme: 'dark' }
     });
     initializeMiniGraphProgress(Reveal);
+    if (typeof window.initializeAboutMeKnowledgeGraph === 'function') {
+      initializeAboutMeKnowledgeGraph(Reveal);
+    } else {
+      console.error('About-me graph bootstrap is missing (slides/intro/slide-2-about-me-graph.js not loaded).');
+    }
   </script>
 </body>
 </html>

@@ -133,11 +133,17 @@
     }
   
     function getGrowthTarget(model, reveal) {
-      const horizontalIndex = Math.max(0, Math.min(reveal.getHorizontalSlides().length - 1, reveal.getIndices().h));
-      const currentHorizontal = reveal.getHorizontalSlides()[horizontalIndex];
+      const horizontalSlides = reveal.getHorizontalSlides ? reveal.getHorizontalSlides() : [];
+      if (!horizontalSlides.length) return 1;
+
+      const indices = reveal.getIndices ? reveal.getIndices() : { h: 0, v: 0 };
+      const horizontalIndex = Math.max(0, Math.min(horizontalSlides.length - 1, indices.h || 0));
+      const currentHorizontal = horizontalSlides[horizontalIndex];
+      if (!currentHorizontal) return 1;
+
       const verticalSlides = Array.from(currentHorizontal.querySelectorAll(':scope > section'));
       const sectionSlideCount = Math.max(1, verticalSlides.length || 1);
-      const verticalIndex = Math.max(0, Math.min(sectionSlideCount - 1, reveal.getIndices().v || 0));
+      const verticalIndex = Math.max(0, Math.min(sectionSlideCount - 1, indices.v || 0));
   
       let shownItems = 0;
       for (let idx = 0; idx < horizontalIndex; idx += 1) {
@@ -189,8 +195,14 @@
       const model = buildProgressModel();
       const state = createMiniGraphState(model);
       if (!state) return;
-  
-      const update = () => updateMiniGraph(reveal, model, state);
+
+      const update = () => {
+        try {
+          updateMiniGraph(reveal, model, state);
+        } catch (error) {
+          console.warn('Mini graph progress update skipped:', error);
+        }
+      };
       reveal.on('ready', update);
       reveal.on('slidechanged', update);
       update();

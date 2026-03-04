@@ -76,3 +76,44 @@
   stroke: #ffffff;
   filter: drop-shadow(0 0 7px rgba(147, 219, 255, 0.95));
 }
+
+.about-me-kg-canvas {
+  display: block;
+  width: 100%;
+  height: 560px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.about-me-kg-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  color: #f0b0b0;
+  font-size: 0.65em;
+  text-align: center;
+}
+
+.about-me-kg-overlay {
+  position: fixed;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  width: min(1680px, 99vw);
+  height: min(720px, 80vh);
+  z-index: 18;
+  display: none;
+  pointer-events: auto;
+}
+
+.about-me-kg-overlay.is-active {
+  display: block;
+}
+
+.reveal .slides section.present h2#about-me {
+  position: relative;
+  z-index: 40;
+}
