@@ -117,3 +117,38 @@
   position: relative;
   z-index: 40;
 }
+
+.reveal .strengths-limits-grid {
+  margin-top: 0.5em;
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .strengths-limits-pane {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.8em 1em;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.reveal .strengths-limits-pane h3 {
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+.reveal .strengths-limits-pane ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.reveal .strengths-pane {
+  border-top: 3px solid rgba(139, 214, 170, 0.9);
+}
+
+.reveal .limits-pane {
+  border-top: 3px solid rgba(239, 155, 155, 0.9);
+}
