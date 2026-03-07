@@ -10,14 +10,15 @@ function collectSlidePaths(dir, base = '') {
   const dirs = [];
   for (const e of entries) {
     const rel = path.join(base, e.name);
-    if (e.isDirectory()) dirs.push(rel);
+    if (e.isDirectory()) dirs.push(e.name);
     else if (e.name.endsWith('.md')) files.push(rel);
   }
   dirs.sort();
   files.sort();
   const result = [];
-  for (const d of dirs) {
-    result.push(...collectSlidePaths(path.join(dir, d), d));
+  for (const dirName of dirs) {
+    const relDir = path.join(base, dirName);
+    result.push(...collectSlidePaths(path.join(dir, dirName), relDir));
   }
   result.push(...files);
   return result;

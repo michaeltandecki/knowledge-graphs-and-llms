@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Transcript facts mini graph</title>
+  <desc id="desc">Google acquired YouTube, and Chad Hurley founded YouTube.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f6071" />
+    </marker>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.34" />
+    </filter>
+  </defs>
+
+  <line x1="241" y1="123" x2="629" y2="197" fill="none" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+  <line x1="241" y1="297" x2="629" y2="223" fill="none" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+
+  <text x="432" y="156" fill="#8ea0b4" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="0.8">ACQUIRED</text>
+  <text x="432" y="276" fill="#8ea0b4" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="0.8">FOUNDED</text>
+
+  <g filter="url(#softShadow)">
+    <circle cx="170" cy="110" r="72" fill="#e6c96d" stroke="#f3df9f" stroke-width="4" />
+    <circle cx="170" cy="310" r="72" fill="#b287b8" stroke="#d9b7dd" stroke-width="4" />
+    <circle cx="700" cy="210" r="72" fill="#e6c96d" stroke="#f3df9f" stroke-width="4" />
+  </g>
+
+  <text x="170" y="118" fill="#15222e" font-size="22" font-weight="700" text-anchor="middle">Google</text>
+  <text x="170" y="318" fill="#f7eeff" font-size="22" font-weight="700" text-anchor="middle">Chad H.</text>
+  <text x="700" y="218" fill="#15222e" font-size="22" font-weight="700" text-anchor="middle">YouTube</text>
+</svg>

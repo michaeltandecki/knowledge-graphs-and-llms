@@ -43,6 +43,24 @@ Use this file as the default operating guide for any coding agent working in thi
 - Ensure side-by-side panes have equal height (`align-items: stretch` on container; panes as flex columns).
 - Keep pane styling restrained and readable in the existing dark theme (subtle border/gradient/shadow, no overly slick effects).
 
+## Mini Graph SVG Style Guide (for small KG visuals)
+- For tiny graph illustrations (2-3 nodes, 2-3 edges), prefer static SVG assets over Cytoscape or Mermaid.
+- Store mini graph assets in `slides/assets/mini-graphs/`.
+- Embed using `<img class="mini-graph-svg" src="...">` inside slide Markdown; include meaningful `alt` text.
+- Use SVG with a `viewBox`; keep sizing responsive via CSS (`.mini-graph-svg`) rather than inline width/height hacks.
+- Keep the graph floating on the slide background: no outer frame, no bounding box, no decorative background panel.
+- Default geometry:
+  - all nodes same size unless explicitly requested otherwise
+  - straight directed edges with arrowheads
+  - edge labels concise, uppercase relation verbs when readable
+  - for 3-node "two facts to one entity" patterns, use a triangular layout (left nodes vertically separated, right node centered)
+- Keep node/edge colors aligned with the existing Cytoscape palette:
+  - person node: fill `#b287b8`, border `#d9b7dd`, light text
+  - organization/company node: fill `#e6c96d`, border `#f3df9f`, dark text
+  - edges: `#4f6071`; edge label text: `#8ea0b4`
+- Keep text in SVG minimal; avoid extra explanatory captions inside the graphic itself.
+- Use Mermaid for process flowcharts (pipelines), not for mini Neo4j-like graph visuals unless explicitly requested.
+
 ## Verification Checklist
 After meaningful edits:
 1. Run `pnpm build`.
