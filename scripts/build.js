@@ -39,7 +39,10 @@ const sections = groupOrder
   .map((group) => {
     const files = byGroup.get(group);
     const inner = files
-      .map((p) => `        <section data-markdown="slides/${p}" data-separator="^\\n\\n\\n" data-separator-vertical="^\\n\\n"></section>`)
+      .map((p) => {
+        const slideClass = p === 'section-1-intro/slide-1-title.md' ? '' : ' class="title-top-center-body"';
+        return `        <section${slideClass} data-markdown="slides/${p}" data-separator="^\\n\\n\\n" data-separator-vertical="^\\n\\n"></section>`;
+      })
       .join('\n');
     return `      <section>\n${inner}\n      </section>`;
   })
@@ -72,6 +75,28 @@ ${sections}
   <script src="js/mini-graph-progress.js"></script>
   <script src="slides/section-1-intro/slide-2-about-me-graph.js?v=20260304-5"></script>
   <script>
+    function applyTitleTopCenterBodyLayout() {
+      const slides = document.querySelectorAll('.reveal .slides section.title-top-center-body');
+      slides.forEach((slide) => {
+        if (slide.querySelector(':scope > .slide-body')) return;
+
+        const first = slide.firstElementChild;
+        if (!first || first.tagName !== 'H2') return;
+
+        const body = document.createElement('div');
+        body.className = 'slide-body';
+
+        let cursor = first.nextSibling;
+        while (cursor) {
+          const next = cursor.nextSibling;
+          body.appendChild(cursor);
+          cursor = next;
+        }
+
+        slide.appendChild(body);
+      });
+    }
+
     Reveal.initialize({
       hash: true,
       width: 1200,
@@ -79,6 +104,7 @@ ${sections}
       plugins: [ RevealMarkdown, RevealNotes, RevealMermaid ],
       mermaid: { theme: 'dark' }
     });
+    Reveal.on('ready', applyTitleTopCenterBodyLayout);
     initializeMiniGraphProgress(Reveal);
     if (typeof window.initializeAboutMeKnowledgeGraph === 'function') {
       initializeAboutMeKnowledgeGraph(Reveal);

@@ -2,7 +2,18 @@
 
 Default modern grounding pipeline:
 
-**documents -> chunking -> embeddings -> vector DB -> LLM**
+<pre class="mermaid">
+flowchart LR
+  D[Documents] --> C[Chunking]
+  C --> E[Embeddings]
+  E --> V[Vector DB]
+  Q[User question] --> QE[Query embedding]
+  QE --> V
+  V --> R[Top-k retrieval]
+  R --> LLM[LLM]
+  LLM --> A[Answer]
+  Q --> LLM
+</pre>
 
 Why it became standard:
 

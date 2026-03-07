@@ -2,7 +2,14 @@
 
 Experiment flow:
 
-**transcripts -> LLM extraction -> entities + relationships -> graph -> queries -> LLM answers**
+<pre class="mermaid">
+flowchart LR
+  T[Transcripts] --> X[LLM extraction]
+  X --> ER[Entities + relationships]
+  ER --> G[Graph]
+  G --> Q[Queries]
+  Q --> A[LLM answers]
+</pre>
 
 Focus:
 

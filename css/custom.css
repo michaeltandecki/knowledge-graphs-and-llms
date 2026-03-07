@@ -1,6 +1,39 @@
 /* Custom typography and layout (reference: DouwMarx/presentations) */
 /* Moon theme: dark background — use light text and subtle accents */
 .reveal h2 { font-size: 1.4em; color: #e2e2e2; letter-spacing: 0.02em; }
+.reveal .slides section.title-top-center-body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  transform: none !important;
+}
+
+.reveal .slides section.title-top-center-body > h2:first-child {
+  flex: 0 0 auto;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-size: 1.4em;
+}
+
+.reveal .slides section.title-top-center-body > .slide-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Keep wide custom layouts full-width inside centered body wrapper. */
+.reveal .slides section.title-top-center-body > .slide-body > .two-col,
+.reveal .slides section.title-top-center-body > .slide-body > .about-me-kg-canvas {
+  align-self: stretch;
+}
 .reveal h3 { font-size: 1.0em; color: #b8b8b8; }
 .reveal ul, .reveal ol { font-size: 0.75em; line-height: 1.5; }
 .reveal li { margin-bottom: 0.4em; }
@@ -151,4 +184,47 @@
 
 .reveal .limits-pane {
   border-top: 3px solid rgba(239, 155, 155, 0.9);
+}
+
+.reveal .retrieval-design-space-grid {
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .retrieval-design-space-image-pane,
+.reveal .retrieval-design-space-text-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .retrieval-design-space-image {
+  width: 100%;
+  max-height: 540px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.reveal .retrieval-design-space-text-pane {
+  text-align: left;
+}
+
+.reveal .retrieval-design-space-text-pane ul {
+  margin: 0.3em 0 0.5em;
+  padding-left: 1.2em;
+}
+
+/* Mermaid diagrams should blend into slide background, not code-block chrome. */
+.reveal pre.mermaid {
+  width: 100%;
+  margin: 0.4em 0 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .mermaid,
+.reveal .mermaid svg {
+  background: transparent !important;
 }
