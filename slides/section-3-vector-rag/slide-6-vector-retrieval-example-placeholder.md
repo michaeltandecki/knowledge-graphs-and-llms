@@ -1,7 +1,7 @@
 ## Vector Retrieval Example (Placeholder)
 
-**Question (placeholder):**
-Which founder is connected to a company later acquired by Google?
+**Question:**
+Who was a Google employee that later founded their own company?
 
 **Retrieved fragments (placeholder):**
 

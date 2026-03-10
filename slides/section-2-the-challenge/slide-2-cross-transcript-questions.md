@@ -2,12 +2,10 @@
 
 These are relationship-heavy questions over many transcripts:
 
-> "[Placeholder] Which founders appear in multiple company stories?"
+> "Who were the most important people involved in Google’s founding and early growth, and how were they connected to each other?"
 
-> "[Placeholder] Which companies acquired competitors mentioned earlier?"
+> "How did Google’s technological innovations build on each other from search to AI?"
 
-> "[Placeholder] Which companies are connected through acquisition chains?"
-
-> "[Placeholder] Which founder is linked to companies later acquired by Google?"
+> "Which companies and research groups outside Google played important roles in shaping Google’s AI strategy?"
 
 **Key point:** these require linking facts across documents, not just retrieving similar text.

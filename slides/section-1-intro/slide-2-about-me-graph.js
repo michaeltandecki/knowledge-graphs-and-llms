@@ -10,28 +10,14 @@
       { data: { id: "p_michael", label: "Michael Tandecki", type: "Person", name: "Michael Tandecki" } },
       { data: { id: "deg_phd_physics", label: "PhD in Physics", type: "Education", degree: "PhD", field: "Physics" } },
       { data: { id: "org_cern", label: "CERN", type: "Organization", name: "CERN" } },
-      { data: { id: "loc_geneva", label: "Geneva", type: "Location", name: "Geneva" } },
       { data: { id: "org_triumf", label: "TRIUMF", type: "Organization", name: "TRIUMF" } },
-      { data: { id: "loc_vancouver", label: "Vancouver", type: "Location", name: "Vancouver" } },
-      { data: { id: "org_bisnode", label: "Bisnode", type: "Organization", name: "Bisnode" } },
-      { data: { id: "role_ds_bisnode", label: "Data Scientist", type: "Role", title: "Data Scientist" } },
-      { data: { id: "org_napoleon_games", label: "Napoleon Games", type: "Organization", name: "Napoleon Games" } },
-      { data: { id: "role_ds_napoleon", label: "Data Scientist", type: "Role", title: "Data Scientist" } },
       { data: { id: "org_raito", label: "Raito", type: "Organization", name: "Raito" } },
-      { data: { id: "role_backend_raito", label: "Backend Engineer", type: "Role", title: "Backend Engineer" } },
       { data: { id: "org_collibra", label: "Collibra", type: "Organization", name: "Collibra" } },
-      { data: { id: "role_ai_expert", label: "AI Expert", type: "Role", title: "AI Expert" } },
-      { data: { id: "role_po", label: "Product Owner", type: "Role", title: "Product Owner" } },
-      { data: { id: "role_senior_manager", label: "Senior Manager", type: "Role", title: "Senior Manager" } },
-      { data: { id: "role_data_scientist", label: "Staff Data Scientist", type: "Role", title: "Collibra" } },
+      { data: { id: "role_ai_expert", label: "Data Scientist", type: "Role", title: "Data Scientist" } },
       { data: { id: "org_ae", label: "AE", type: "Organization", name: "AE" } },
       { data: { id: "role_freelancer_ae", label: "Freelancer", type: "Role", title: "Freelancer (AE)" } },
-      { data: { id: "role_freelancer_collibra", label: "Freelancer", type: "Role", title: "Freelancer (Collibra)" } },
       { data: { id: "org_imec", label: "imec", type: "Organization", name: "imec" } },
       { data: { id: "org_insurance", label: "Insurance Company", type: "Organization", name: "Insurance Company" } },
-      { data: { id: "role_project_insurance", label: "Project (Freelance)", type: "Role", title: "Freelance Project" } },
-      { data: { id: "skill_ml", label: "Machine Learning", type: "Skill", name: "Machine Learning" } },
-      { data: { id: "skill_spark", label: "Apache Spark", type: "Skill", name: "Apache Spark" } },
       { data: { id: "skill_nlp", label: "NLP", type: "Skill", name: "Natural Language Processing" } },
       { data: { id: "skill_kg", label: "Knowledge Graphs", type: "Skill", name: "Knowledge Graphs" } },
       { data: { id: "skill_neo4j", label: "Neo4j", type: "Skill", name: "Neo4j" } },
@@ -39,36 +25,20 @@
     ],
     edges: [
       { data: { id: "e_has_degree", source: "p_michael", target: "deg_phd_physics", label: "HAS_EDUCATION" } },
-      { data: { id: "e_worked_at_cern", source: "p_michael", target: "org_cern", label: "HAS_WORKED_AT" } },
-      { data: { id: "e_cern_loc", source: "org_cern", target: "loc_geneva", label: "LOCATED_IN" } },
-      { data: { id: "e_worked_at_triumf", source: "p_michael", target: "org_triumf", label: "HAS_WORKED_AT" } },
-      { data: { id: "e_triumf_loc", source: "org_triumf", target: "loc_vancouver", label: "LOCATED_IN" } },
-      { data: { id: "e_role_bisnode", source: "p_michael", target: "role_ds_bisnode", label: "HELD_ROLE" } },
-      { data: { id: "e_role_bisnode_at", source: "role_ds_bisnode", target: "org_bisnode", label: "AT_ORG" } },
-      { data: { id: "e_role_napoleon", source: "p_michael", target: "role_ds_napoleon", label: "HELD_ROLE" } },
-      { data: { id: "e_role_napoleon_at", source: "role_ds_napoleon", target: "org_napoleon_games", label: "AT_ORG" } },
-      { data: { id: "e_skill_ml_person", source: "p_michael", target: "skill_ml", label: "WORKED_WITH" } },
-      { data: { id: "e_skill_spark_person", source: "p_michael", target: "skill_spark", label: "WORKED_WITH" } },
-      { data: { id: "e_role_backend", source: "p_michael", target: "role_backend_raito", label: "HELD_ROLE" } },
-      { data: { id: "e_role_backend_at", source: "role_backend_raito", target: "org_raito", label: "AT_ORG" } },
-      { data: { id: "e_raito_neo4j", source: "role_backend_raito", target: "skill_neo4j", label: "WORKED_WITH" } },
+      { data: { id: "e_worked_at_cern", source: "deg_phd_physics", target: "org_cern", label: "EXPERIMENT_AT" } },
+      { data: { id: "e_worked_at_triumf", source: "deg_phd_physics", target: "org_triumf", label: "POSTDOC_AT" } },
+      { data: { id: "e_role_backend_at", source: "p_michael", target: "org_raito", label: "WORKED_AT" } },
+      { data: { id: "e_raito_neo4j", source: "org_raito", target: "skill_neo4j", label: "EXPOSURE_TO" } },
       { data: { id: "e_raito_acq_event", source: "org_raito", target: "event_acq_raito_2025", label: "SUBJECT_OF" } },
       { data: { id: "e_collibra_acq_event", source: "org_collibra", target: "event_acq_raito_2025", label: "ACQUIRER_IN" } },
       { data: { id: "e_role_ai_expert", source: "p_michael", target: "role_ai_expert", label: "HELD_ROLE" } },
-      { data: { id: "e_role_ai_expert_at", source: "role_ai_expert", target: "org_collibra", label: "AT_ORG" } },
-      { data: { id: "e_role_po", source: "p_michael", target: "role_po", label: "HELD_ROLE" } },
-      { data: { id: "e_role_po_at", source: "role_po", target: "org_collibra", label: "AT_ORG" } },
-      { data: { id: "e_role_sm", source: "p_michael", target: "role_senior_manager", label: "HELD_ROLE" } },
-      { data: { id: "e_role_sm_at", source: "role_senior_manager", target: "org_collibra", label: "AT_ORG" } },
+      { data: { id: "e_role_ai_expert_at", source: "p_michael", target: "org_collibra", label: "WORKED_AT / WORKS_AT" } },
       { data: { id: "e_collibra_nlp", source: "org_collibra", target: "skill_nlp", label: "EXPOSURE_TO" } },
       { data: { id: "e_collibra_kg", source: "org_collibra", target: "skill_kg", label: "EXPOSURE_TO" } },
-      { data: { id: "e_freelance_ae", source: "p_michael", target: "role_freelancer_ae", label: "STARTED_FREELANCING" } },
+      { data: { id: "e_freelance_ae", source: "p_michael", target: "role_freelancer_ae", label: "CURRENTLY_FREELANCING" } },
       { data: { id: "e_freelance_ae_at", source: "role_freelancer_ae", target: "org_ae", label: "AT_ORG" } },
       { data: { id: "e_ae_worked_at_imec", source: "org_ae", target: "org_imec", label: "WORKED_WITH_CLIENT" } },
-      { data: { id: "e_freelance_collibra", source: "p_michael", target: "role_freelancer_collibra", label: "CURRENTLY_WORKING_AS" } },
-      { data: { id: "e_freelance_collibra_at", source: "role_freelancer_collibra", target: "org_collibra", label: "AT_ORG" } },
-      { data: { id: "e_project_insurance_role", source: "p_michael", target: "role_project_insurance", label: "DOING_PROJECT" } },
-      { data: { id: "e_project_insurance_at", source: "role_project_insurance", target: "org_insurance", label: "FOR_ORG" } }
+      { data: { id: "e_project_insurance_at", source: "role_freelancer_ae", target: "org_insurance", label: "AT_ORG" } }
     ]
   };
 
@@ -79,7 +49,7 @@
         style: {
           label: "data(label)",
           color: "#e7edf4",
-          "font-size": 12,
+          "font-size": 18,
           "font-weight": 500,
           "text-wrap": "wrap",
           "text-max-width": 100,
@@ -96,7 +66,7 @@
       },
       {
         selector: 'node[type = "Person"]',
-        style: { "background-color": "#b287b8", "border-color": "#d9b7dd", width: 142, height: 142, "font-size": 16, "text-max-width": 120 }
+        style: { "background-color": "#b287b8", "border-color": "#d9b7dd", width: 142, height: 142, "font-size": 22, "text-max-width": 120 }
       },
       {
         selector: 'node[type = "Organization"]',
@@ -132,8 +102,8 @@
           "arrow-scale": 1.3,
           "curve-style": "bezier",
           label: "data(label)",
-          color: "#8ea0b4",
-          "font-size": 9,
+          color: "#ffffff",
+          "font-size": 12,
           "text-background-color": "#02060b",
           "text-background-opacity": 0.75,
           "text-background-padding": 3,
@@ -198,87 +168,37 @@
     target.classList.add("is-active");
   }
 
-  function buildPresetPositions(graphElements, viewportWidth, viewportHeight) {
-    const centerId = "p_michael";
-    const adjacency = new Map();
+  function buildPresetPositions(viewportWidth, viewportHeight) {
+    const width = Math.max(980, viewportWidth);
+    const height = Math.max(560, viewportHeight);
+    const x = function percentX(ratio) { return Math.round(width * ratio); };
+    const y = function percentY(ratio) { return Math.round(height * ratio); };
 
-    graphElements.nodes.forEach(function addNode(node) {
-      adjacency.set(node.data.id, new Set());
-    });
-    graphElements.edges.forEach(function addEdge(edge) {
-      const source = edge.data.source;
-      const target = edge.data.target;
-      if (!adjacency.has(source)) adjacency.set(source, new Set());
-      if (!adjacency.has(target)) adjacency.set(target, new Set());
-      adjacency.get(source).add(target);
-      adjacency.get(target).add(source);
-    });
-
-    const distance = new Map([[centerId, 0]]);
-    const queue = [centerId];
-    while (queue.length) {
-      const current = queue.shift();
-      const currentDistance = distance.get(current) || 0;
-      (adjacency.get(current) || []).forEach(function visit(next) {
-        if (distance.has(next)) return;
-        distance.set(next, currentDistance + 1);
-        queue.push(next);
-      });
-    }
-
-    const rings = new Map();
-    graphElements.nodes.forEach(function assignRing(node) {
-      const id = node.data.id;
-      const ring = id === centerId ? 0 : Math.min(distance.get(id) || 3, 3);
-      if (!rings.has(ring)) rings.set(ring, []);
-      rings.get(ring).push(node);
-    });
-
-    [1, 2, 3].forEach(function sortRing(ring) {
-      const nodes = rings.get(ring) || [];
-      nodes.sort(function compare(a, b) {
-        const typeCmp = String(a.data.type).localeCompare(String(b.data.type));
-        if (typeCmp !== 0) return typeCmp;
-        return String(a.data.label).localeCompare(String(b.data.label));
-      });
-    });
-
-    const width = Math.max(960, viewportWidth);
-    const height = Math.max(460, viewportHeight);
-    const centerX = Math.round(width / 2);
-    const centerY = Math.round(height / 2);
-    const maxRadiusX = Math.max(200, Math.round((width / 2) - 130));
-    const maxRadiusY = Math.max(160, Math.round((height / 2) - 120));
-    const radiusByRing = {
-      1: { x: Math.round(maxRadiusX * 0.48), y: Math.round(maxRadiusY * 0.48) },
-      2: { x: Math.round(maxRadiusX * 0.74), y: Math.round(maxRadiusY * 0.72) },
-      3: { x: Math.round(maxRadiusX * 0.92), y: Math.round(maxRadiusY * 0.90) }
+    return {
+      p_michael: { x: x(0.44), y: y(0.48) },
+      deg_phd_physics: { x: x(0.24), y: y(0.28) },
+      org_cern: { x: x(0.09), y: y(0.20) },
+      org_triumf: { x: x(0.09), y: y(0.38) },
+      role_ai_expert: { x: x(0.27), y: y(0.66) },
+      org_raito: { x: x(0.62), y: y(0.32) },
+      skill_neo4j: { x: x(0.81), y: y(0.20) },
+      event_acq_raito_2025: { x: x(0.78), y: y(0.42) },
+      org_collibra: { x: x(0.74), y: y(0.60) },
+      skill_nlp: { x: x(0.91), y: y(0.56) },
+      skill_kg: { x: x(0.90), y: y(0.73) },
+      role_freelancer_ae: { x: x(0.47), y: y(0.79) },
+      org_ae: { x: x(0.64), y: y(0.88) },
+      org_imec: { x: x(0.82), y: y(0.88) },
+      org_insurance: { x: x(0.30), y: y(0.88) }
     };
-
-    const positions = {};
-    positions[centerId] = { x: centerX, y: centerY };
-
-    [1, 2, 3].forEach(function placeRing(ring) {
-      const nodes = rings.get(ring) || [];
-      const count = Math.max(1, nodes.length);
-      nodes.forEach(function placeNode(node, index) {
-        const angle = (-Math.PI / 2) + ((2 * Math.PI * index) / count);
-        const radius = radiusByRing[ring];
-        positions[node.data.id] = {
-          x: Math.round(centerX + (Math.cos(angle) * radius.x)),
-          y: Math.round(centerY + (Math.sin(angle) * radius.y))
-        };
-      });
-    });
-
-    return positions;
   }
 
   function relayoutInOverlay() {
     if (!cy || cy.destroyed()) return;
     const target = ensureOverlay();
-    const positions = buildPresetPositions(elements, target.clientWidth, target.clientHeight);
+    const positions = buildPresetPositions(target.clientWidth, target.clientHeight);
 
+    cy.resize();
     cy.layout({
       name: "preset",
       fit: false,
@@ -286,9 +206,10 @@
       positions: positions
     }).run();
 
-    cy.resize();
-    cy.zoom(1);
-    cy.pan({ x: 0, y: 0 });
+    const michael = cy.getElementById("p_michael");
+    if (michael && michael.length > 0) cy.center(michael);
+    else cy.center();
+    cy.zoom(0.95);
   }
 
   function createGraph() {
@@ -301,6 +222,7 @@
       cy = null;
     }
 
+    const positions = buildPresetPositions(target.clientWidth, target.clientHeight);
     cy = window.cytoscape({
       container: target,
       elements: elements,
@@ -313,7 +235,7 @@
         name: "preset",
         fit: false,
         animate: false,
-        positions: buildPresetPositions(elements, target.clientWidth, target.clientHeight)
+        positions: positions
       }
     });
 
