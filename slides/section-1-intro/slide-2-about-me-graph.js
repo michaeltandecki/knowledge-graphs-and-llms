@@ -13,9 +13,10 @@
       { data: { id: "org_triumf", label: "TRIUMF", type: "Organization", name: "TRIUMF" } },
       { data: { id: "org_raito", label: "Raito", type: "Organization", name: "Raito" } },
       { data: { id: "org_collibra", label: "Collibra", type: "Organization", name: "Collibra" } },
+      { data: { id: "org_eqipa", label: "eqipa", type: "Organization", name: "eqipa" } },
       { data: { id: "role_ai_expert", label: "Data Scientist", type: "Role", title: "Data Scientist" } },
       { data: { id: "org_ae", label: "AE", type: "Organization", name: "AE" } },
-      { data: { id: "role_freelancer_ae", label: "Freelancer", type: "Role", title: "Freelancer (AE)" } },
+      { data: { id: "role_freelancer", label: "Freelancer", type: "Role", title: "Freelancer" } },
       { data: { id: "org_imec", label: "imec", type: "Organization", name: "imec" } },
       { data: { id: "org_insurance", label: "Insurance Company", type: "Organization", name: "Insurance Company" } },
       { data: { id: "skill_nlp", label: "NLP", type: "Skill", name: "Natural Language Processing" } },
@@ -35,10 +36,11 @@
       { data: { id: "e_role_ai_expert_at", source: "p_michael", target: "org_collibra", label: "WORKED_AT / WORKS_AT" } },
       { data: { id: "e_collibra_nlp", source: "org_collibra", target: "skill_nlp", label: "EXPOSURE_TO" } },
       { data: { id: "e_collibra_kg", source: "org_collibra", target: "skill_kg", label: "EXPOSURE_TO" } },
-      { data: { id: "e_freelance_ae", source: "p_michael", target: "role_freelancer_ae", label: "CURRENTLY_FREELANCING" } },
-      { data: { id: "e_freelance_ae_at", source: "role_freelancer_ae", target: "org_ae", label: "AT_ORG" } },
+      { data: { id: "e_freelance_ae", source: "p_michael", target: "role_freelancer", label: "CURRENT" } },
+      { data: { id: "e_freelance_ae_at", source: "role_freelancer", target: "org_ae", label: "AT_ORG" } },
       { data: { id: "e_ae_worked_at_imec", source: "org_ae", target: "org_imec", label: "WORKED_WITH_CLIENT" } },
-      { data: { id: "e_project_insurance_at", source: "role_freelancer_ae", target: "org_insurance", label: "AT_ORG" } }
+      { data: { id: "e_project_insurance_at", source: "role_freelancer", target: "org_insurance", label: "AT_ORG" } },
+      { data: { id: "e_eqipa_founder", source: "p_michael", target: "org_eqipa", label: "FOUNDED" } }
     ]
   };
 
@@ -186,7 +188,8 @@
       org_collibra: { x: x(0.74), y: y(0.60) },
       skill_nlp: { x: x(0.91), y: y(0.56) },
       skill_kg: { x: x(0.90), y: y(0.73) },
-      role_freelancer_ae: { x: x(0.47), y: y(0.79) },
+      role_freelancer: { x: x(0.47), y: y(0.79) },
+      org_eqipa: { x: x(0.58), y: y(0.73) },
       org_ae: { x: x(0.64), y: y(0.88) },
       org_imec: { x: x(0.82), y: y(0.88) },
       org_insurance: { x: x(0.30), y: y(0.88) }
