@@ -2,7 +2,7 @@
 
 > "If knowledge is scattered across many documents, is vector RAG enough?"
 
-- For simple retrieval, often yes.
+- For simple retrieval, often yes. And honestly, it can be surprisingly good. 
 - For relationship-heavy questions across documents, no. You need explicit structure.
 
-> Do you see a place for KGs in the retrieval strategy of your own project?
+> Where in your own projects are the relationships hiding — and would making them explicit change what you can ask?

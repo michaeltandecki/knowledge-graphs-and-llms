@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SLIDES_DIR = path.join(__dirname, '..', 'slides');
+const naturalSort = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 
 function collectSlidePaths(dir, base = '') {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -13,8 +14,8 @@ function collectSlidePaths(dir, base = '') {
     if (e.isDirectory()) dirs.push(e.name);
     else if (e.name.endsWith('.md')) files.push(rel);
   }
-  dirs.sort();
-  files.sort();
+  dirs.sort(naturalSort);
+  files.sort(naturalSort);
   const result = [];
   for (const dirName of dirs) {
     const relDir = path.join(base, dirName);

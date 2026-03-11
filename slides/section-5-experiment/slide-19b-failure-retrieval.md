@@ -15,7 +15,7 @@ Who was a Google employee that later founded their own company?
     <img
       class="mini-graph-svg"
       src="slides/assets/mini-graphs/retrieval-founded-duplicates.svg"
-      alt="Retrieved edges dominated by repeated founded relations between people and companies."
+      alt="All retrieved nodes and edges from the system in the poc."
     />
   </div>
 </div>

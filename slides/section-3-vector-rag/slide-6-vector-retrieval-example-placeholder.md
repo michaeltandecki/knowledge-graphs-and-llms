@@ -16,4 +16,4 @@ Who was a Google employee that later founded their own company?
 <b>Bret Taylor</b> — Founded FriendFeed (later also founded Quip)
 </ul>
 
-**Observation:** relevant text is retrieved, but relationships are still implicit and must be inferred each time.
+**Observation:** relevant text is retrieved somewhat - look at the scores -, but relationships are still implicit and must be inferred each time.

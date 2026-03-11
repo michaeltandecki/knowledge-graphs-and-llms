@@ -1,11 +1,16 @@
-## Where Knowledge Graphs Break
+## How to mitigate KG failure modes
 
-As we saw with the example
-
-- extraction errors create incorrect edges
-- entity duplication hurts identity consistency
-- ontology design takes iteration
-- graphs are always incomplete
-- there is not one way to retrieve data
-
-Balanced view: KGs solve some retrieval problems while introducing data-quality and modeling work.
+<div class="two-col strengths-limits-grid">
+  <div class="strengths-limits-pane limits-pane">
+    <ul>
+      <li>enforce ontology adherence during extraction; small schema drift can silently erase valid answers at query time</li>
+      <li>validate against the original text and ontology; check that extracted entities and relationships are present and use allowed types</li>
+    </ul>
+  </div>
+  <div class="strengths-limits-pane strengths-pane">
+    <ul>
+      <li>treat query design as a first-class iteration loop; test multi-hop patterns early or you'll miss real cross-entity links</li>
+      <li>Cypher query generation is not the only option</li>
+    </ul>
+  </div>
+</div>

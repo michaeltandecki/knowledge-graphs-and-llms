@@ -1,6 +1,6 @@
 ## Experiment Pipeline Overview
 
-Experiment flow:
+Experiment flow, straightforward in theory...
 
 <pre class="mermaid">
 flowchart LR
@@ -19,5 +19,5 @@ Dataset scale:
 
 Focus:
 
-- evaluate retrieval quality for cross-transcript relationship questions
+- enable and evaluate cross-transcript relationship questions
 - compare against a vector RAG baseline
