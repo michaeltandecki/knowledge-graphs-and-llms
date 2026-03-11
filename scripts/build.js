@@ -41,7 +41,7 @@ const sections = groupOrder
     const files = byGroup.get(group);
     const inner = files
       .map((p) => {
-        const slideClass = p === 'section-1-intro/slide-1-title.md' ? '' : ' class="title-top-center-body"';
+        const slideClass = p === 'section-1-intro/slide-1-title.md' ? ' class="title-slide"' : ' class="title-top-center-body"';
         return `        <section${slideClass} data-markdown="slides/${p}" data-separator="^\\n\\n\\n" data-separator-vertical="^\\n\\n"></section>`;
       })
       .join('\n');

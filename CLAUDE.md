@@ -1,8 +1,8 @@
-# AGENTS.md
+# CLAUDE.md
 
-## Purpose
-This repository contains a Reveal.js presentation about knowledge graphs and LLMs.
-Use this file as the default operating guide for any coding agent working in this repo.
+See `TODO.md` for open tasks (both user tasks and Claude TO DO list).
+
+This is a Reveal.js presentation — **"LLMs Talk. Knowledge Graphs Remember."** — an intuitive look at how LLMs and knowledge graphs complement each other to build more reliable AI systems.
 
 ## Project Layout
 - `slides/` contains one Markdown file per slide, grouped by section folders.
@@ -14,7 +14,7 @@ Use this file as the default operating guide for any coding agent working in thi
 ## Core Commands
 - Install deps: `pnpm install`
 - Build deck: `pnpm build` (or `node scripts/build.js`)
-- Local preview: `pnpm start` (open `http://localhost:8000`)
+- Local preview: `pnpm start` (open `http://localhost:8060`)
 
 ## Slide Workflow Rules
 1. Treat slide Markdown files under `slides/` as the source of truth.
@@ -27,7 +27,7 @@ Use this file as the default operating guide for any coding agent working in thi
 - Audience: mixed Data and AI practitioners
 - Duration target: 20-25 minutes
 - Total slides target: about 20 (current working version may be 24)
-- Narrative arc: question -> first attempt -> limitation -> alternative representation -> experiment -> comparison -> conclusion
+- Narrative arc: question → first attempt → limitation → alternative representation → experiment → comparison → conclusion
 - Use one running question early and revisit it later
 - Avoid heavy theory and avoid sounding like a KG sales pitch
 - Mark concrete examples as placeholders when real examples are not finalized
@@ -74,7 +74,7 @@ After meaningful edits:
 - When practical, initialize or resize Cytoscape only after the target slide is active (`Reveal.on("ready")`, `Reveal.on("slidechanged")`, and window `resize`).
 - On slide activation, call `cy.resize()` before fitting/centering so Cytoscape recalculates viewport dimensions.
 - Keep pan/zoom behavior explicit in config (`userPanningEnabled`, `userZoomingEnabled`, `autoungrabify`) to avoid accidental interaction regressions while tuning layout.
-- Avoid hand-edited inline styles in devtools as a “fix” (e.g., temporary width/padding changes); move all final sizing to source CSS/JS.
+- Avoid hand-edited inline styles in devtools as a "fix" (e.g., temporary width/padding changes); move all final sizing to source CSS/JS.
 - If labels look blurry on large displays, set Cytoscape `pixelRatio: "auto"` and tune node/label font sizes in stylesheet selectors.
 - For dense radial graphs, prefer deterministic positioning (`preset`) or centered layouts over repeated auto-fit loops that may drift between renders.
 - Keep slide title layering explicit: ensure heading `z-index` is above graph canvas when graph is absolutely positioned.

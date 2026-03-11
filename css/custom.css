@@ -1,7 +1,7 @@
 /* Custom typography and layout (reference: DouwMarx/presentations) */
 /* Moon theme: dark background — use light text and subtle accents */
 .reveal h2 { font-size: 1.4em; color: #e2e2e2; letter-spacing: 0.02em; }
-.reveal .slides section.title-top-center-body {
+.reveal:not(.overview) .slides section.title-top-center-body {
   display: grid;
   grid-template-rows: auto 1fr;
   top: 0 !important;
@@ -51,18 +51,50 @@
 .reveal .fig-iframe-tall { width: 95%; height: 550px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
 .reveal .fig-iframe-short { width: 95%; height: 350px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
 
-/* Title slide: larger title, clear subtitle area, footer */
-.reveal .slides section.title-slide h1,
-.reveal .slides section:first-child h1 { font-size: 1.8em; margin-bottom: 0.3em; }
-.reveal .slides section.title-slide h2,
-.reveal .slides section:first-child h2 { font-size: 0.9em; font-weight: normal; }
+/* Title slide layout */
+.reveal:not(.overview) .slides section.title-slide {
+  top: 0 !important;
+  height: 100% !important;
+}
+
+.reveal .slides section.title-slide .title-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.reveal .slides section.title-slide h1 {
+  font-size: 2.2em;
+  line-height: 1.15;
+  margin-bottom: 0.5em;
+  color: #e2e2e2;
+}
+
+.reveal .slides section.title-slide .title-subtitle {
+  font-size: 0.82em;
+  color: #b8b8b8;
+  max-width: 78%;
+  line-height: 1.55;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
 .reveal .title-footer {
   position: absolute;
   bottom: 0.8em;
   left: 0;
   right: 0;
-  font-size: 0.35em;
+  font-size: 0.65em;
   color: #6a7b7b;
+}
+
+.reveal .title-footer .title-name {
+  font-size: 1.25em;
+  color: #93a1a1;
+  font-weight: 600;
 }
 
 #kg-progress {

@@ -21,5 +21,5 @@ MERGE (noam)-[:WORKED_AT {role:"Founder"}]->(ca);
 Mode set to vector.
 [vector]> Who was a Google employee that later founded their own company? Just give a list with bullet points: name of the person + company they started or were an early employee at. 
 
-assistant> - **Bret Taylor** – Founded **FriendFeed** (later also founded **Quip**)  
+assistant> - ** ** – Founded **FriendFeed** (later also founded **Quip**)  
 - **Lars** – Founded **weav.io**
