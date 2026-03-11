@@ -4,7 +4,7 @@
   <div class="retrieval-design-space-image-pane">
     <img
       class="retrieval-design-space-image"
-      src="https://substackcdn.com/image/fetch/$s_!WmRi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facf8b099-7e87-4f81-9b0a-c68eb225fbec_1100x1285.jpeg"
+      src="slides/assets/images/acf8b099-7e87-4f81-9b0a-c68eb225fbec_1100x1285.jpg"
       alt="Overview diagram showing multiple RAG architecture variants"
     />
   </div>

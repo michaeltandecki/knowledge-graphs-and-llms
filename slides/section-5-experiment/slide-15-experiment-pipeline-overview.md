@@ -11,11 +11,10 @@ flowchart LR
   Q --> A[LLM answers]
 </pre>
 
-Dataset scale:
+Dataset:
 
-- 18 transcripts
-- 24,364 transcript paragraphs processed
-- 16,692 extracted triples (entity-relationship facts) in the graph
+- **18** transcripts, **24,364** transcript paragraphs processed, **16,692** extracted triples (entity-relationship facts) in the graph
+- Extraction via GPT-5.2, stored in Neo4j.
 
 Focus:
 

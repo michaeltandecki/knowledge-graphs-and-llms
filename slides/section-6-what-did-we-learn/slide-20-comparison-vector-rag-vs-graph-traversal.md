@@ -20,4 +20,3 @@
   </div>
 </div>
 
-Strongest takeaway: when the question is relationship-heavy and cross-document, explicit structure wins.

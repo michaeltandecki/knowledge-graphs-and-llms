@@ -1,4 +1,4 @@
-## What didn't work? Retrieval.
+## Retrieval: Queries Need Careful Design
 
 **Question:**
 Who was a Google employee that later founded their own company?

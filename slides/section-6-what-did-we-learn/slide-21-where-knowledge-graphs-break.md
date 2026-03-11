@@ -1,4 +1,4 @@
-## How to mitigate KG failure modes
+## KG Failure Modes (and what helps)
 
 <div class="two-col strengths-limits-grid">
   <div class="strengths-limits-pane limits-pane">
@@ -10,7 +10,8 @@
   <div class="strengths-limits-pane strengths-pane">
     <ul>
       <li>treat query design as a first-class iteration loop; test multi-hop patterns early or you'll miss real cross-entity links</li>
-      <li>Cypher query generation is not the only option</li>
+      <li>Cypher query generation is not the only option; search through references, 
+      vector embeddings, etc.</li>
     </ul>
   </div>
 </div>

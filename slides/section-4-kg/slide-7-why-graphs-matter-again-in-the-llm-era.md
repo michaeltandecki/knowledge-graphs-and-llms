@@ -1,7 +1,7 @@
 ## Why I Wanted to Revisit Knowledge Graphs
 
 There is a lot of buzz again around **knowledge graphs**:
-semantic layers, GraphRAG, and graph-native retrieval.
+semantic layers, GraphRAG (open-sourced by Microsoft in 2024), and graph-native retrieval.
 
 KGs are not new:
 - **Semantic Web era:** (2000s) formal linked-data vision (W3C standards, ontologies)
