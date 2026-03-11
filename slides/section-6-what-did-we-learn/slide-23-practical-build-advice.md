@@ -1,7 +1,7 @@
 ## Practical Build Advice
 
-> Start with your problem and your users
+> Start with real questions from real users — not a demo
 
-> Build a test dataset, then iterate
+> Build a test set before you build a pipeline
 
-> Plan for hybrid retrieval from day one
+> Evaluate against that test set, not your own intuition

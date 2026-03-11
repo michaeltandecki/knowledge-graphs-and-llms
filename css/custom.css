@@ -97,49 +97,21 @@
   font-weight: 600;
 }
 
-#kg-progress {
+#section-pill {
   position: fixed;
   left: 18px;
   bottom: 18px;
   z-index: 45;
-  width: 220px;
+  padding: 0.45em 1.125em;
+  background: rgba(10, 14, 20, 0.72);
+  color: #a8b8c8;
+  font-size: 0.9rem;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   pointer-events: none;
-}
-
-#kg-progress .kg-progress-map {
-  width: 100%;
-  height: auto;
-  display: block;
-  overflow: visible;
-}
-
-#kg-progress .kg-edge,
-#kg-progress .kg-node {
-  opacity: 0;
-  transition: opacity 240ms ease, fill 240ms ease, stroke 240ms ease, filter 240ms ease;
-}
-
-#kg-progress .kg-edge {
-  stroke: rgba(132, 183, 232, 0.88);
-  stroke-width: 1.6;
-  filter: drop-shadow(0 0 4px rgba(93, 162, 230, 0.35));
-}
-
-#kg-progress .kg-node {
-  fill: rgba(170, 204, 236, 0.95);
-  stroke: rgba(234, 245, 255, 0.72);
-  stroke-width: 1.2;
-}
-
-#kg-progress .kg-edge.is-visible,
-#kg-progress .kg-node.is-visible {
-  opacity: 1;
-}
-
-#kg-progress .kg-node.is-current {
-  fill: #e6f6ff;
-  stroke: #ffffff;
-  filter: drop-shadow(0 0 7px rgba(147, 219, 255, 0.95));
 }
 
 .about-me-kg-canvas {

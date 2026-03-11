@@ -5,6 +5,16 @@ const path = require('path');
 const SLIDES_DIR = path.join(__dirname, '..', 'slides');
 const naturalSort = (a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 
+const SECTION_LABELS = {
+  'section-1-intro': null,
+  'section-2-the-challenge': 'The Challenge',
+  'section-3-vector-rag': 'Vector RAG',
+  'section-4-kg': 'Knowledge Graphs',
+  'section-5-experiment': 'Experiment',
+  'section-6-what-did-we-learn': 'Lessons Learnt',
+  'section-7-final-insight': null,
+};
+
 function collectSlidePaths(dir, base = '') {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
@@ -40,10 +50,12 @@ for (const p of slidePaths) {
 const sections = groupOrder
   .map((group) => {
     const files = byGroup.get(group);
+    const label = SECTION_LABELS[group] ?? null;
+    const dataSectionAttr = label ? ` data-section="${label}"` : '';
     const inner = files
       .map((p) => {
         const slideClass = p === 'section-1-intro/slide-1-title.md' ? ' class="title-slide"' : ' class="title-top-center-body"';
-        return `        <section${slideClass} data-markdown="slides/${p}" data-separator="^\\n\\n\\n" data-separator-vertical="^\\n\\n"></section>`;
+        return `        <section${slideClass}${dataSectionAttr} data-markdown="slides/${p}" data-separator="^\\n\\n\\n" data-separator-vertical="^\\n\\n"></section>`;
       })
       .join('\n');
     return `      <section>\n${inner}\n      </section>`;
@@ -68,13 +80,13 @@ ${sections}
     </div>
   </div>
 
-  <div id="kg-progress" aria-hidden="true"></div>
+  <div id="section-pill" hidden></div>
   <script src="https://unpkg.com/reveal.js@5.2.1/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
   <script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
-  <script src="js/mini-graph-progress.js"></script>
+  <script src="js/section-pill.js"></script>
   <script src="slides/section-1-intro/slide-2-about-me-graph.js?v=20260304-5"></script>
   <script>
     function applyTitleTopCenterBodyLayout() {
@@ -107,11 +119,6 @@ ${sections}
       mermaid: { theme: 'dark' }
     });
     Reveal.on('ready', applyTitleTopCenterBodyLayout);
-    if (typeof window.initializeMiniGraphProgress === 'function') {
-      initializeMiniGraphProgress(Reveal);
-    } else {
-      console.error('Mini graph bootstrap is missing (js/mini-graph-progress.js not loaded).');
-    }
     if (typeof window.initializeAboutMeKnowledgeGraph === 'function') {
       initializeAboutMeKnowledgeGraph(Reveal);
     } else {
