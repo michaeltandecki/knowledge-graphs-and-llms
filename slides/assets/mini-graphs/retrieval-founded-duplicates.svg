@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Retrieval output dominated by repeated founded edges</title>
+  <desc id="desc">A subset of returned triples where person nodes connect to company nodes through FOUNDED edges, including duplicate counts and one DeepMind edge.</desc>
+
+  <defs>
+    <marker id="arrow-rfd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f6071" />
+    </marker>
+    <filter id="softShadow-rfd" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.34" />
+    </filter>
+  </defs>
+
+  <line x1="210" y1="70" x2="770" y2="70" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+  <line x1="210" y1="154" x2="770" y2="154" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+  <line x1="210" y1="238" x2="770" y2="238" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+  <line x1="210" y1="322" x2="770" y2="322" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+  <line x1="210" y1="406" x2="770" y2="448" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+  <line x1="210" y1="490" x2="770" y2="448" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow-rfd)" />
+
+  <text x="500" y="56" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x3</text>
+  <text x="500" y="140" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x2</text>
+  <text x="500" y="224" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x4</text>
+  <text x="500" y="308" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x1</text>
+  <text x="500" y="406" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x3</text>
+  <text x="500" y="492" fill="#8ea0b4" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.6">FOUNDED x3</text>
+
+  <g filter="url(#softShadow-rfd)">
+    <circle cx="170" cy="70" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+    <circle cx="170" cy="154" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+    <circle cx="170" cy="238" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+    <circle cx="170" cy="322" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+    <circle cx="170" cy="406" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+    <circle cx="170" cy="490" r="40" fill="#b287b8" stroke="#d9b7dd" stroke-width="3" />
+
+    <circle cx="810" cy="70" r="40" fill="#e6c96d" stroke="#f3df9f" stroke-width="3" />
+    <circle cx="810" cy="154" r="40" fill="#e6c96d" stroke="#f3df9f" stroke-width="3" />
+    <circle cx="810" cy="238" r="40" fill="#e6c96d" stroke="#f3df9f" stroke-width="3" />
+    <circle cx="810" cy="322" r="40" fill="#e6c96d" stroke="#f3df9f" stroke-width="3" />
+    <circle cx="810" cy="448" r="40" fill="#e6c96d" stroke="#f3df9f" stroke-width="3" />
+  </g>
+
+  <text x="170" y="74" fill="#f7eeff" font-size="16" font-weight="700" text-anchor="middle">Ilya</text>
+  <text x="170" y="158" fill="#f7eeff" font-size="16" font-weight="700" text-anchor="middle">Dario</text>
+  <text x="170" y="242" fill="#f7eeff" font-size="16" font-weight="700" text-anchor="middle">Noam</text>
+  <text x="170" y="319" fill="#f7eeff" font-size="14" font-weight="700" text-anchor="middle">Demis</text>
+  <text x="170" y="335" fill="#f7eeff" font-size="14" font-weight="700" text-anchor="middle">Hassabis</text>
+  <text x="170" y="410" fill="#f7eeff" font-size="16" font-weight="700" text-anchor="middle">Bret</text>
+  <text x="170" y="494" fill="#f7eeff" font-size="16" font-weight="700" text-anchor="middle">Paul</text>
+
+  <text x="810" y="74" fill="#15222e" font-size="15" font-weight="700" text-anchor="middle">OpenAI</text>
+  <text x="810" y="158" fill="#15222e" font-size="14" font-weight="700" text-anchor="middle">Anthropic</text>
+  <text x="810" y="233" fill="#15222e" font-size="12" font-weight="700" text-anchor="middle">Character</text>
+  <text x="810" y="248" fill="#15222e" font-size="12" font-weight="700" text-anchor="middle">AI</text>
+  <text x="810" y="326" fill="#15222e" font-size="15" font-weight="700" text-anchor="middle">DeepMind</text>
+  <text x="810" y="452" fill="#15222e" font-size="12" font-weight="700" text-anchor="middle">FriendFeed</text>
+</svg>

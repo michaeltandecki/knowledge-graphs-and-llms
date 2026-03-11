@@ -1,32 +1,14 @@
-## What didn't work? 
+## What didn't work? KG Generation.
 
-**Question:**
-Who was a Google employee that later founded their own company?
+**Question:** Who was a Google employee that later founded their own company?
 
-This fragment was not retrieved:
+**Data from Neo4j:**
 
-Generated Cypher:
-MERGE (noam)-[:FOUNDED]->(ca);
-MERGE (ca:Company {name:"Character.AI"})
-MERGE (noam)-[:WORKED_AT {role:"AI Researcher"}]->(gg);
+```cypher
+(noam:Person {name: "Noam Shazeer"})-[:WORKED_AT]->(:Company {name:"Google"})
+(noam)-[:WORKED_AT {role: "Founder"}]->(:Company {name:"Character.AI"})
+```
 
-Why did it fail: Probably because it did not include the [:FOUNDED] relation. 
-
-Generated Cypher:
-MERGE (bret)-[:WORKED_AT {role: "Associate Product Manager", start: 2003}]->(google)
-MERGE (bret:Person {name: "Bret Taylor"})
-
-MERGE (friendfeed:Company {name: "FriendFeed"})
-MERGE (friendfeed:Company {name: "FriendFeed"})
-MERGE (paul)-[:FOUNDED {source: "250629_google-0025"}]->(friendfeed)
-MERGE (paul)-[:WORKED_AT {role: "Engineer"]->(google)
-MERGE (paul)-[:FOUNDED {source: "250629_google-0025"}]->(friendfeed)
-
-Failure:
-- Wasn't captured that he founded friendfeed
-- When looking at Code, 
-
-
-
-So LLM -> KG is not a silver bullet, still needs human review. 
-
+**Failure signals:**
+- Imperfect adherence to ontology, not applying the `[:FOUNDER]` relation.
+- LLM -> KG is not a silver bullet; human review is still required.
