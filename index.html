@@ -94,7 +94,11 @@
       mermaid: { theme: 'dark' }
     });
     Reveal.on('ready', applyTitleTopCenterBodyLayout);
-    initializeMiniGraphProgress(Reveal);
+    if (typeof window.initializeMiniGraphProgress === 'function') {
+      initializeMiniGraphProgress(Reveal);
+    } else {
+      console.error('Mini graph bootstrap is missing (js/mini-graph-progress.js not loaded).');
+    }
     if (typeof window.initializeAboutMeKnowledgeGraph === 'function') {
       initializeAboutMeKnowledgeGraph(Reveal);
     } else {

@@ -50,7 +50,7 @@ jobs:
           mkdir -p deploy
           cp index.html deploy/
           cp favicon.svg deploy/
-          cp -r css slides deploy/
+          cp -r css js slides deploy/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
