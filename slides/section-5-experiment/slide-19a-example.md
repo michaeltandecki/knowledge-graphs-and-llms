@@ -6,7 +6,7 @@ Who was a Google employee that later founded their own company?
 **Retrieved graph fragments**
 
 ```
-MERGE (dario)-[:WORKED_AT {source: "251005_google-the-ai-company-0001"}]->(google)
+MERGE (dario)-[:WORKED_AT]->(google)
 MERGE (dario)-[:FOUNDED]->(anthropic)
 MERGE (ilya:Person {name: "Ilya Sutskever"})
 MERGE (ilya)-[:FOUNDED {year: 2015}]->(openai)
