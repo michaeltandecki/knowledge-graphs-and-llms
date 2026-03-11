@@ -2,7 +2,7 @@
 
 Revisiting the running question:
 
-> "If knowledge is scattered across many documents, is Vector RAG enough?"
+> "If knowledge is scattered across many documents, is vector RAG enough?"
 
 Same question, two retrieval behaviors:
 

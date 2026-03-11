@@ -14,4 +14,4 @@ flowchart LR
 Focus:
 
 - evaluate retrieval quality for cross-transcript relationship questions
-- compare against a Vector RAG baseline
+- compare against a vector RAG baseline

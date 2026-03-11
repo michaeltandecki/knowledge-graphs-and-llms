@@ -246,6 +246,16 @@
   padding-left: 1.2em;
 }
 
+.reveal .retrieved-fragments {
+  font-size: 0.58em;
+  line-height: 1.35;
+  margin: 0.2em 0 0.45em;
+}
+
+.reveal .retrieved-fragments li {
+  margin-bottom: 0.28em;
+}
+
 .reveal .graph-core-idea-grid {
   gap: 1.2em;
   align-items: stretch;
@@ -307,6 +317,17 @@
   object-fit: contain;
 }
 
+.reveal .ontology-kg-grid {
+  gap: 1.4em;
+  align-items: stretch;
+}
+
+.reveal .ontology-kg-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .reveal .acquired-wordmark {
   display: inline-block;
   margin: 0.15em 0 0.45em;
@@ -335,4 +356,48 @@
 .reveal .mermaid,
 .reveal .mermaid svg {
   background: transparent !important;
+}
+
+/* Three-column layout */
+.three-col { display: flex; gap: 1.5em; align-items: stretch; }
+.three-col > * { flex: 1; }
+
+.transcript-snippet {
+  font-size: 0.56em;
+  line-height: 1.6;
+  font-style: italic;
+  color: #c0c8d0;
+  padding: 0.85em 1em;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.transcript-snippet .snippet-label {
+  font-style: normal;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #8ea0b4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.kg-inline-pane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kg-inline-pane svg {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+}
+
+.transcript-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
 }

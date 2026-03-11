@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Knowledge graph: Google founders and acquisitions</title>
+  <desc id="desc">Larry Page and Sergey Brin both founded Google. Google acquired YouTube and Waze.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f6071" />
+    </marker>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.34" />
+    </filter>
+  </defs>
+
+  <!-- Larry Page → Google -->
+  <line x1="216" y1="147" x2="394" y2="193" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+  <!-- Sergey Brin → Google -->
+  <line x1="216" y1="273" x2="394" y2="227" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+  <!-- Google → YouTube -->
+  <line x1="526" y1="192" x2="684" y2="148" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+  <!-- Google → Waze -->
+  <line x1="526" y1="228" x2="684" y2="272" stroke="#4f6071" stroke-width="3" marker-end="url(#arrow)" />
+
+  <text x="305" y="158" fill="#8ea0b4" font-size="19" font-weight="600" text-anchor="middle" letter-spacing="0.8">FOUNDED</text>
+  <text x="305" y="268" fill="#8ea0b4" font-size="19" font-weight="600" text-anchor="middle" letter-spacing="0.8">FOUNDED</text>
+  <text x="605" y="158" fill="#8ea0b4" font-size="19" font-weight="600" text-anchor="middle" letter-spacing="0.8">ACQUIRED</text>
+  <text x="605" y="282" fill="#8ea0b4" font-size="19" font-weight="600" text-anchor="middle" letter-spacing="0.8">ACQUIRED</text>
+
+  <g filter="url(#softShadow)">
+    <circle cx="150" cy="130" r="68" fill="#b287b8" stroke="#d9b7dd" stroke-width="4" />
+    <circle cx="150" cy="290" r="68" fill="#b287b8" stroke="#d9b7dd" stroke-width="4" />
+    <circle cx="460" cy="210" r="68" fill="#e6c96d" stroke="#f3df9f" stroke-width="4" />
+    <circle cx="750" cy="130" r="68" fill="#e6c96d" stroke="#f3df9f" stroke-width="4" />
+    <circle cx="750" cy="290" r="68" fill="#e6c96d" stroke="#f3df9f" stroke-width="4" />
+  </g>
+
+  <text x="150" y="125" fill="#f7eeff" font-size="20" font-weight="700" text-anchor="middle">Larry</text>
+  <text x="150" y="149" fill="#f7eeff" font-size="20" font-weight="700" text-anchor="middle">Page</text>
+
+  <text x="150" y="285" fill="#f7eeff" font-size="20" font-weight="700" text-anchor="middle">Sergey</text>
+  <text x="150" y="309" fill="#f7eeff" font-size="20" font-weight="700" text-anchor="middle">Brin</text>
+
+  <text x="460" y="218" fill="#15222e" font-size="20" font-weight="700" text-anchor="middle">Google</text>
+
+  <text x="750" y="138" fill="#15222e" font-size="20" font-weight="700" text-anchor="middle">YouTube</text>
+
+  <text x="750" y="298" fill="#15222e" font-size="20" font-weight="700" text-anchor="middle">Waze</text>
+</svg>
