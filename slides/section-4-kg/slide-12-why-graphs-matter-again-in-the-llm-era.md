@@ -1,9 +1,13 @@
-## Why Graphs Matter Again in the LLM Era
+## Why I Wanted to Revisit Knowledge Graphs
 
-What changed in the LLM era:
+There is a lot of buzz again around **knowledge graphs**:
+semantic layers, GraphRAG, and graph-native retrieval.
 
-- LLMs can extract entities and relationships from raw text
-- graph construction no longer requires only manual curation
-- teams can iterate from text -> structure much faster
+My motivation was simple:
+I wanted to test for myself whether graphs are finally practical for this kind of QA task.
 
-Result: graph-based memory is becoming practical again for relationship-heavy questions.
+Short timeline:
+
+- **Semantic Web era:** formal linked-data vision (W3C standards, ontologies)
+- **Knowledge Graph era:** practical entity-centric systems at scale
+- **LLM era:** natural-language interface over mixed retrieval systems

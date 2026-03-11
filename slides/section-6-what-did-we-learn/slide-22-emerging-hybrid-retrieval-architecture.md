@@ -1,12 +1,21 @@
 ## Emerging Hybrid Retrieval Architecture
 
-In practice, retrieval is becoming orchestrated and hybrid:
-
-- vector search
-- graph queries
-- keyword/BM25 search
-- APIs/structured systems
-
-LLM or agent layer routes to the right tool.
-
-**Positioning:** graphs act as structured memory inside larger systems, not a standalone replacement for everything.
+<div class="two-col retrieval-design-space-grid">
+  <div class="retrieval-design-space-image-pane">
+    <img
+      class="retrieval-design-space-image"
+      src="https://substackcdn.com/image/fetch/$s_!WmRi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facf8b099-7e87-4f81-9b0a-c68eb225fbec_1100x1285.jpeg"
+      alt="Overview diagram showing multiple RAG architecture variants"
+    />
+  </div>
+  <div class="retrieval-design-space-text-pane">
+    <p>Tailor retrieval strategy to your problem and your users.</p>
+    <ul>
+      <li><strong>Vector search:</strong> semantic similarity over unstructured text</li>
+      <li><strong>Keyword search (BM25):</strong> lexical precision and exact term matching</li>
+      <li><strong>Graph queries:</strong> explicit entities and multi-hop relationships</li>
+      <li><strong>APIs / structured data:</strong> authoritative operational facts</li>
+    </ul>
+    <p>Practical systems orchestrate these methods through an LLM or agent layer.</p>
+  </div>
+</div>
