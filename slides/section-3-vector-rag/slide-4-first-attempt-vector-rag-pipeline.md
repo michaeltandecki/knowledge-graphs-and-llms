@@ -1,6 +1,4 @@
-## First Attempt: Vector RAG Pipeline
-
-Default modern grounding pipeline:
+## Vector RAG: Pipeline, Strengths, and Limits
 
 <pre class="mermaid">
 flowchart LR
@@ -15,8 +13,21 @@ flowchart LR
   Q --> LLM
 </pre>
 
-Why it became standard:
-
-- simple to implement
-- good semantic retrieval baseline
-- easy to integrate with LLM applications
+<div class="two-col strengths-limits-grid">
+  <div class="strengths-limits-pane strengths-pane">
+    <h3>Strengths</h3>
+    <ul>
+      <li>semantic similarity search works well for broad recall</li>
+      <li>retrieves relevant passages quickly</li>
+      <li>grounds answers in source text</li>
+    </ul>
+  </div>
+  <div class="strengths-limits-pane limits-pane">
+    <h3>Limitations</h3>
+    <ul>
+      <li>hard to connect facts across many documents</li>
+      <li>weak entity identity / disambiguation </li>
+      <li>multi-hop relationships remain implicit in text</li>
+    </ul>
+  </div>
+</div>
