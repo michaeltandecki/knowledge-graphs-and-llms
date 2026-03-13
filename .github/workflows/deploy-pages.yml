@@ -51,6 +51,7 @@ jobs:
           cp index.html deploy/
           cp favicon.svg deploy/
           cp -r css js slides deploy/
+          if [ -d snapshots ]; then cp -r snapshots deploy/; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

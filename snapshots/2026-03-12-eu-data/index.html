@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Graphs and LLMs</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/theme/moon.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section class="title-slide" data-markdown="slides/section-1-intro/slide-1-title.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-markdown="slides/section-1-intro/slide-2-about-me.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-section="The Challenge" data-markdown="slides/section-2-the-challenge/slide-1-acquired-dataset-distributed-facts.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="The Challenge" data-markdown="slides/section-2-the-challenge/slide-2-cross-transcript-questions.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="The Challenge" data-markdown="slides/section-2-the-challenge/slide-3-running-question-for-the-talk.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-section="Vector RAG" data-markdown="slides/section-3-vector-rag/slide-4-first-attempt-vector-rag-pipeline.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Vector RAG" data-markdown="slides/section-3-vector-rag/slide-6-vector-retrieval-example-placeholder.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-section="Knowledge Graphs" data-markdown="slides/section-4-kg/slide-7-why-graphs-matter-again-in-the-llm-era.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Knowledge Graphs" data-markdown="slides/section-4-kg/slide-08-graph-core-idea-explicit-relationships.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Knowledge Graphs" data-markdown="slides/section-4-kg/slide-09-ontology-vs-knowledge-graph.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-section="Experiment" data-markdown="slides/section-5-experiment/slide-15-experiment-pipeline-overview.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Experiment" data-markdown="slides/section-5-experiment/slide-16-transcript-to-knowledge-graph.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Experiment" data-markdown="slides/section-5-experiment/slide-19a-example.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Experiment" data-markdown="slides/section-5-experiment/slide-19b-failure-retrieval.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Experiment" data-markdown="slides/section-5-experiment/slide-19c-failure-generation.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-section="Lessons Learnt" data-markdown="slides/section-6-what-did-we-learn/slide-20-comparison-vector-rag-vs-graph-traversal.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Lessons Learnt" data-markdown="slides/section-6-what-did-we-learn/slide-21-where-knowledge-graphs-break.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Lessons Learnt" data-markdown="slides/section-6-what-did-we-learn/slide-22-emerging-hybrid-retrieval-architecture.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+        <section class="title-top-center-body" data-section="Lessons Learnt" data-markdown="slides/section-6-what-did-we-learn/slide-23-practical-build-advice.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+      <section>
+        <section class="title-top-center-body" data-markdown="slides/section-7-final-insight/slide-24-final-insight.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      </section>
+    </div>
+  </div>
+
+  <div id="section-pill" hidden></div>
+  <script src="https://unpkg.com/reveal.js@5.2.1/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.12.3/plugin/mermaid/mermaid.js"></script>
+  <script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
+  <script src="js/section-pill.js"></script>
+  <script src="slides/section-1-intro/slide-2-about-me-graph.js?v=20260304-5"></script>
+  <script>
+    function applyTitleTopCenterBodyLayout() {
+      const slides = document.querySelectorAll('.reveal .slides section.title-top-center-body');
+      slides.forEach((slide) => {
+        if (slide.querySelector(':scope > .slide-body')) return;
+
+        const first = slide.firstElementChild;
+        if (!first || first.tagName !== 'H2') return;
+
+        const body = document.createElement('div');
+        body.className = 'slide-body';
+
+        let cursor = first.nextSibling;
+        while (cursor) {
+          const next = cursor.nextSibling;
+          body.appendChild(cursor);
+          cursor = next;
+        }
+
+        slide.appendChild(body);
+      });
+    }
+
+    Reveal.initialize({
+      hash: true,
+      width: 1200,
+      height: 700,
+      plugins: [ RevealMarkdown, RevealNotes, RevealMermaid ],
+      mermaid: { theme: 'dark' }
+    });
+    Reveal.on('ready', applyTitleTopCenterBodyLayout);
+    if (typeof window.initializeAboutMeKnowledgeGraph === 'function') {
+      initializeAboutMeKnowledgeGraph(Reveal);
+    } else {
+      console.error('About-me graph bootstrap is missing (slides/section-1-intro/slide-2-about-me-graph.js not loaded).');
+    }
+  </script>
+</body>
+</html>

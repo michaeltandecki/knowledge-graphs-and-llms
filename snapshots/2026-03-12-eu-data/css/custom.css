@@ -1,0 +1,376 @@
+/* Custom typography and layout (reference: DouwMarx/presentations) */
+/* Moon theme: dark background — use light text and subtle accents */
+.reveal h2 { font-size: 1.4em; color: #e2e2e2; letter-spacing: 0.02em; }
+.reveal:not(.overview) .slides section.title-top-center-body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  transform: none !important;
+}
+
+.reveal .slides section.title-top-center-body > h2:first-child {
+  flex: 0 0 auto;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-size: 1.4em;
+}
+
+.reveal .slides section.title-top-center-body > .slide-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Keep wide custom layouts full-width inside centered body wrapper. */
+.reveal .slides section.title-top-center-body > .slide-body > .two-col,
+.reveal .slides section.title-top-center-body > .slide-body > .about-me-kg-canvas {
+  align-self: stretch;
+}
+.reveal h3 { font-size: 1.0em; color: #b8b8b8; }
+.reveal ul, .reveal ol { font-size: 0.75em; line-height: 1.5; }
+.reveal li { margin-bottom: 0.4em; }
+.reveal p { font-size: 0.75em; line-height: 1.45; margin: 0.5em 0; }
+.reveal .small { font-size: 0.55em; }
+.reveal .dim { color: #8a8a8a; }
+.reveal blockquote { font-size: 0.7em; width: 90%; padding: 0.5em 1em; background: rgba(255,255,255,0.06); border-left: 4px solid #93a1a1; }
+.reveal table { font-size: 0.6em; margin: 0 auto; }
+.reveal table th { background: rgba(255,255,255,0.08); }
+.reveal pre { font-size: 0.42em; }
+.two-col { display: flex; gap: 2em; align-items: flex-start; }
+.two-col > * { flex: 1; }
+.highlight-box { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 0.8em 1em; margin: 0.5em 0; }
+.reveal .fig-iframe { width: 95%; height: 500px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
+.reveal .fig-iframe-tall { width: 95%; height: 550px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
+.reveal .fig-iframe-short { width: 95%; height: 350px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
+
+/* Title slide layout */
+.reveal:not(.overview) .slides section.title-slide {
+  top: 0 !important;
+  height: 100% !important;
+}
+
+.reveal .slides section.title-slide .title-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.reveal .slides section.title-slide h1 {
+  font-size: 2.2em;
+  line-height: 1.15;
+  margin-bottom: 0.5em;
+  color: #e2e2e2;
+}
+
+.reveal .slides section.title-slide .title-subtitle {
+  font-size: 0.82em;
+  color: #b8b8b8;
+  max-width: 78%;
+  line-height: 1.55;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.reveal .title-footer {
+  position: absolute;
+  bottom: 0.8em;
+  left: 0;
+  right: 0;
+  font-size: 0.65em;
+  color: #6a7b7b;
+}
+
+.reveal .title-footer .title-name {
+  font-size: 1.25em;
+  color: #93a1a1;
+  font-weight: 600;
+}
+
+#section-pill {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 45;
+  padding: 0.45em 1.125em;
+  background: rgba(10, 14, 20, 0.72);
+  color: #a8b8c8;
+  font-size: 0.9rem;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.about-me-kg-canvas {
+  display: block;
+  width: 100%;
+  height: 560px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.about-me-kg-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  color: #f0b0b0;
+  font-size: 0.65em;
+  text-align: center;
+}
+
+.about-me-kg-overlay {
+  position: fixed;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  width: min(1680px, 99vw);
+  height: min(720px, 80vh);
+  z-index: 18;
+  display: none;
+  pointer-events: auto;
+}
+
+.about-me-kg-overlay.is-active {
+  display: block;
+}
+
+.reveal .slides section.present h2#about-me {
+  position: relative;
+  z-index: 40;
+}
+
+.reveal .strengths-limits-grid {
+  margin-top: 0.5em;
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .strengths-limits-pane {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.8em 1em;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.reveal .strengths-limits-pane h3 {
+  margin-top: 0;
+  margin-bottom: 0.35em;
+}
+
+.reveal .strengths-limits-pane ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.reveal .strengths-pane {
+  border-top: 3px solid rgba(139, 214, 170, 0.9);
+}
+
+.reveal .limits-pane {
+  border-top: 3px solid rgba(239, 155, 155, 0.9);
+}
+
+.reveal .retrieval-design-space-grid {
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .retrieval-design-space-image-pane,
+.reveal .retrieval-design-space-text-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .retrieval-design-space-image {
+  width: 100%;
+  max-height: 540px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.reveal .retrieval-design-space-text-pane {
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.reveal .retrieval-design-space-text-pane ul {
+  margin: 0.3em 0 0.5em;
+  padding-left: 1.2em;
+}
+
+.reveal .retrieved-fragments {
+  font-size: 0.58em;
+  line-height: 1.35;
+  margin: 0.2em 0 0.45em;
+}
+
+.reveal .retrieved-fragments li {
+  margin-bottom: 0.28em;
+}
+
+.reveal .graph-core-idea-grid {
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .graph-core-idea-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .graph-core-idea-text-pane {
+  text-align: left;
+}
+
+.reveal .graph-core-idea-text-pane ul {
+  margin: 0.3em 0 0.5em;
+  padding-left: 1.2em;
+}
+
+.reveal .graph-core-idea-visual-pane {
+  padding: 0;
+}
+
+.reveal .running-question-grid {
+  gap: 1.2em;
+  align-items: stretch;
+}
+
+.reveal .running-question-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .running-question-text-pane {
+  text-align: left;
+}
+
+.reveal .running-question-text-pane ul {
+  margin: 0.3em 0 0.5em;
+  padding-left: 1.2em;
+}
+
+.reveal .running-question-image-pane {
+  padding: 0;
+}
+
+.reveal .running-question-screenshot {
+  width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.reveal .mini-graph-svg {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+.reveal .ontology-kg-grid {
+  gap: 1.4em;
+  align-items: stretch;
+}
+
+.reveal .ontology-kg-pane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.reveal .acquired-wordmark {
+  display: inline-block;
+  margin: 0.15em 0 0.45em;
+  font-family: "Proxima Nova", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 26px;
+  color: rgb(51, 255, 204);
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Mermaid diagrams should blend into slide background, not code-block chrome. */
+.reveal pre.mermaid {
+  width: 100%;
+  margin: 0.4em 0 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .mermaid,
+.reveal .mermaid svg {
+  background: transparent !important;
+}
+
+/* Three-column layout */
+.three-col { display: flex; gap: 1.5em; align-items: stretch; }
+.three-col > * { flex: 1; }
+
+.transcript-snippet {
+  font-size: 0.56em;
+  line-height: 1.6;
+  font-style: italic;
+  color: #c0c8d0;
+  padding: 0.85em 1em;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.transcript-snippet .snippet-label {
+  font-style: normal;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #8ea0b4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.kg-inline-pane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kg-inline-pane svg {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+}
+
+.transcript-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
